@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import {
   selectAll,
   selectById,
@@ -11,6 +12,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (_, res) => {
   res.send("try GET /contatos");
